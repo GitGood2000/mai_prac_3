@@ -12,35 +12,35 @@ import {Row, Col, Input, Steps, Button, message, Form} from 'antd'
 
 const { Step } = Steps;
 
-const steps = [
-    {
-        title: 'Начало',
-        content: <Form1></Form1>
-    },
-    {
-        title: 'Опыт работы',
-        content: <Form2></Form2>
-    },
-    {
-        title: 'Github',
-        content: <Form3></Form3>
-    },
-    {
-        title: 'Достижения',
-        content: <Form4></Form4>
-    },
-    {
-        title: 'Будущее',
-        content: <Form5></Form5>
-    },
-    {
-        title: 'Завершение',
-        content: <Form6></Form6>
-    }
-];
-
 export default function Home() {
     const [current, setCurrent] = React.useState(0);
+
+    const steps = [
+        {
+            title: 'Начало',
+            content: <Form1></Form1>
+        },
+        {
+            title: 'Опыт работы',
+            content: <Form2></Form2>
+        },
+        {
+            title: 'Github',
+            content: <Form3></Form3>
+        },
+        {
+            title: 'Достижения',
+            content: <Form4></Form4>
+        },
+        {
+            title: 'Будущее',
+            content: <Form5></Form5>
+        },
+        {
+            title: 'Завершение',
+            content: <Form6></Form6>
+        }
+    ];
 
     return (
         <MainLayout>
