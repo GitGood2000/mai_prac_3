@@ -16,7 +16,7 @@ export default function Home() {
     const [current, setCurrent] = React.useState(0);
     const [formdata, setFormData] = React.useState({});
 
-    const step1_complete = (data) => {
+    const step1_complete = (data:any) => {
         setFormData(data);
         setCurrent(current+1)
     }

@@ -4,7 +4,7 @@ import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
 const Form1: FC = (props) => {
-    const uploadComplete = (data) => {
+    const uploadComplete = (data:any) => {
         props.onComplete(data);
     }
 
