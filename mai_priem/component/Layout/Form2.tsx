@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.sass'
 import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
-const Form2: FC = () => {
+const Form2: FC = (props) => {
     const [current, setCurrent] = React.useState(1);
 
     const uploadComplete = (/*data*/) => {
