@@ -4,7 +4,7 @@ import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
 const Form6: FC = () => {
-    const [current, setCurrent] = React.useState(0);
+    const [current, setCurrent] = React.useState(6);
 
     const uploadComplete = (/*data*/) => {
         /*setData(data)*/
