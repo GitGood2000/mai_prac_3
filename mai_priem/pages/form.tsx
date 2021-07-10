@@ -8,7 +8,7 @@ import Form6 from '../component/Layout/Form6'
 import styles from '../styles/Home.module.sass'
 import forms from '../styles/Form.module.sass'
 import React from 'react'
-import {Row, Col, Input, Steps, Button, message, Form} from 'antd'
+import {Row, Col, Input, Steps, Button, message, Form, Result} from 'antd'
 
 const { Step } = Steps;
 
@@ -16,7 +16,7 @@ export default function Home() {
     const [current, setCurrent] = React.useState(0);
     const [formdata, setFormData] = React.useState({});
 
-    const step1_complete = (data:any) => {
+    const step_complete = (data:any) => {
         setFormData(data);
         setCurrent(current+1)
     }
@@ -24,27 +24,44 @@ export default function Home() {
     const steps = [
         {
             title: 'Начало',
-            content: <Form1 onComplete={step1_complete}/>
+            content: <Form1 onComplete={step_complete}/>
         },
         {
             title: 'Опыт работы',
-            content: <Form2></Form2>
+            content: <Form2 onComplete={step_complete}></Form2>
         },
         {
             title: 'Github',
-            content: <Form3></Form3>
+            content: <Form3 onComplete={step_complete}></Form3>
         },
         {
             title: 'Достижения',
-            content: <Form4></Form4>
+            content: <Form4 onComplete={step_complete}></Form4>
         },
         {
             title: 'Будущее',
-            content: <Form5></Form5>
+            content: <Form5 onComplete={step_complete}></Form5>
         },
         {
             title: 'Завершение',
-            content: <Form6></Form6>
+            content: <Form6 onComplete={step_complete}></Form6>
+        },
+        {
+            title: 'Готово!',
+            content: <Row>
+                <Col span={16} offset={4} className={forms.form_col}>
+                    <Result
+                        status="success"
+                        title="Ваша анкета заполнена"
+                        subTitle="Спасибо"
+                        extra={
+                            <Button type="primary" key="console" href={'/'}>
+                                На главную
+                            </Button>
+                        }
+                    />
+                </Col>
+            </Row>
         }
     ];
 
@@ -52,7 +69,7 @@ export default function Home() {
         <MainLayout>
             <div className={styles.main_col}>
                 <Row className={styles.main_row}>
-                    <Col span={18} offset={3}>
+                    <Col span={22} offset={1}>
                         <Steps current={current}>
                             {steps.map(item => (
                                 <Step key={item.title} title={item.title} />
