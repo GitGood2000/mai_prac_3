@@ -42,11 +42,6 @@ const steps = [
 export default function Home() {
     const [current, setCurrent] = React.useState(0);
 
-    const uploadComplete = (/*data*/) => {
-        setCurrent(current + 1);
-        /*setData(data)*/
-    }
-
     return (
         <MainLayout>
             <div className={styles.main_col}>

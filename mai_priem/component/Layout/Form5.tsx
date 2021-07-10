@@ -4,7 +4,7 @@ import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
 const Form5: FC = (props) => {
-    const [current, setCurrent] = React.useState(5);
+    const [current, setCurrent] = React.useState(4);
 
     const uploadComplete = (/*data*/) => {
         setCurrent(current + 1);
@@ -15,15 +15,21 @@ const Form5: FC = (props) => {
             <Row>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Напишите здесь мотивационное письмо
-                    <Input placeholder={"Письмо..."}/>
+                    <Form.Item name="letter" rules={[{ required: true }]}>
+                        <Input placeholder={"Письмо..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
-                    Как вы видите свою ИОТ
-                    <Input placeholder={"Опишите про ИОТ..."}/>
+                    Как вы видите свою ИОТ?
+                    <Form.Item name="IOT" rules={[{ required: true }]}>
+                        <Input placeholder={"Опишите про ИОТ..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
-                    Какой проект вы хотели бы реализовать?
-                    <Input placeholder={"Опишите про ИОТ..."}/>
+                    Как вы видите свою карьеру?
+                    <Form.Item name="career" rules={[{ required: true }]}>
+                        <Input placeholder={"Опишите про карьеру..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={2} offset={11} className={forms.form_col}>
                     <Button type="primary" htmlType="submit">

@@ -15,15 +15,21 @@ const Form2: FC = (props) => {
             <Row>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Какой у вас опыт работы?
-                    <Input placeholder={"Опыт..."}/>
+                    <Form.Item name="exp" rules={[{ required: true }]}>
+                        <Input placeholder={"Опыт..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Где вы работаете?
-                    <Input placeholder={"Место работы..."}/>
+                    <Form.Item name="work" rules={[{ required: true }]}>
+                        <Input placeholder={"Место работы..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Какая у Вас должность?
-                    <Input placeholder={"Про должность..."}/>
+                    <Form.Item name="pos" rules={[{ required: true }]}>
+                        <Input placeholder={"Про должность..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={2} offset={11} className={forms.form_col}>
                     <Button type="primary" htmlType="submit">

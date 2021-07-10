@@ -4,7 +4,7 @@ import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
 const Form3: FC = (props) => {
-    const [current, setCurrent] = React.useState(3);
+    const [current, setCurrent] = React.useState(2);
 
     const uploadComplete = (/*data*/) => {
         setCurrent(current + 1);
@@ -15,15 +15,21 @@ const Form3: FC = (props) => {
             <Row>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Напишите здесь ссылку на ваш профиль Github
-                    <Input placeholder={"Ссылка..."}/>
+                    <Form.Item name="Git" rules={[{ required: true }]}>
+                        <Input placeholder={"Ссылка..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Какие библиотеки и языки вы используете
-                    <Input placeholder={"Опишите про библиотеки..."}/>
+                    <Form.Item name="libs" rules={[{ required: true }]}>
+                        <Input placeholder={"Опишите про библиотеки..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Какой проект вы хотели бы реализовать?
-                    <Input placeholder={"Про проект..."}/>
+                    <Form.Item name="proj" rules={[{ required: true }]}>
+                        <Input placeholder={"Про проект..."}/>
+                    </Form.Item>
                 </Col>
                 <Col span={2} offset={11} className={forms.form_col}>
                     <Button type="primary" htmlType="submit">
