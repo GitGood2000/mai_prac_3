@@ -14,11 +14,17 @@ const { Step } = Steps;
 
 export default function Home() {
     const [current, setCurrent] = React.useState(0);
+    const [formdata, setFormData] = React.useState({});
+
+    const step1_complete = (data) => {
+        setFormData(data);
+        setCurrent(current+1)
+    }
 
     const steps = [
         {
             title: 'Начало',
-            content: <Form1></Form1>
+            content: <Form1 onComplete={step1_complete}/>
         },
         {
             title: 'Опыт работы',

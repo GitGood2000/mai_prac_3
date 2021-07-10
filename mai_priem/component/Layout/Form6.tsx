@@ -4,11 +4,10 @@ import {Button, Col, Form, Input, Row} from "antd";
 import forms from "../../styles/Form.module.sass";
 
 const Form6: FC = (props) => {
-    const [current, setCurrent] = React.useState(5);
-
-    const uploadComplete = (/*data*/) => {
-        /*setData(data)*/
+    const uploadComplete = (data) => {
+        props.onComplete(data);
     }
+
     return <Fragment>
         <Form onFinish={uploadComplete}>
             <Row>
