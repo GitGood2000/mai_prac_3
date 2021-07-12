@@ -12,7 +12,7 @@ const Form6: FC = (props:any) => {
         <Form onFinish={uploadComplete}>
             <Row>
                 <Col span={16} offset={4} className={forms.form_col}>
-                    Какие иностранные языки вы знаете? Насколько хорошо
+                    Какие иностранные языки вы знаете? Насколько хорошо?
                     <Form.Item name="langs" rules={[{ required: true }]}>
                         <Input placeholder={"Ин. Языки..."}/>
                     </Form.Item>
@@ -25,7 +25,7 @@ const Form6: FC = (props:any) => {
                 </Col>
                 <Col span={2} offset={11} className={forms.form_col}>
                     <Button type="primary" htmlType="submit">
-                        Далее
+                        Готово
                     </Button>
                 </Col>
             </Row>

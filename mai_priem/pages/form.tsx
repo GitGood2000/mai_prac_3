@@ -21,6 +21,11 @@ export default function Home() {
         setCurrent(current+1)
     }
 
+    const step_final_complete = (data:any) => {
+        setFormData(data);
+        setCurrent(current+1)
+    }
+
     const steps = [
         {
             title: 'Начало',

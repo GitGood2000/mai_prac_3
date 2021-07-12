@@ -18,7 +18,7 @@ const Form3: FC = (props:any) => {
                     </Form.Item>
                 </Col>
                 <Col span={16} offset={4} className={forms.form_col}>
-                    Какие библиотеки и языки вы используете
+                    Какие библиотеки и языки вы используете?
                     <Form.Item name="libs" rules={[{ required: true }]}>
                         <Input placeholder={"Опишите про библиотеки..."}/>
                     </Form.Item>

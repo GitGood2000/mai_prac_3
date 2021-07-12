@@ -13,7 +13,7 @@ const Form1: FC = (props:any) => {
             <Row>
                 <Col span={16} offset={4} className={forms.form_col}>
                     Какой ВУЗ Вы закончили?
-                    <Form.Item name="u_name" rules={[{ required: true }]}>
+                    <Form.Item name="univer_name" rules={[{ required: true }]}>
                         <Input placeholder={"Название ВУЗа..."}/>
                     </Form.Item>
                 </Col>
