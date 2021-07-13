@@ -75,7 +75,7 @@ export default function Home() {
             <div className={styles.main_col}>
                 <Row className={styles.main_row}>
                     <Col span={22} offset={1}>
-                        <Steps current={current}>
+                        <Steps className={forms.steps_col} current={current}>
                             {steps.map(item => (
                                 <Step key={item.title} title={item.title} />
                             ))}
